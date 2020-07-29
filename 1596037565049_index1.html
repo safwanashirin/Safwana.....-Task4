@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            task4
+        </title>
+        <style> 
+        body{
+          background:white;
+          background-image:url(img.jpg);
+        }
+        
+      .flex-container{
+        
+          display: flex;
+          justify-content:center;
+         
+          padding:200px; 
+       }     
+        #first{
+               width:280px;
+               height:380px;
+               
+        }
+        input[type=button]{
+         height:50px;
+         margin-top:300px;
+         
+         
+        
+        }
+       
+      </style>
+<body>
+        
+          <div class="flex-container">
+                                      
+        <img src="images1.jpg" id="first">
+        <input type="button" onclick="changeImage()" value="TURNON"  id="bulb"/>
+        
+    
+     <script>
+            function changeImage() {
+                var x = document.getElementById('first');
+                if (x.src.match("image.jpg")) {
+                    x.src = "images1.jpg";
+                    document.getElementById("bulb").value = "TURN ON"
+                   
+                }
+                else {
+                    document.getElementById("bulb").value = "TURN OFF"
+                    x.src = "image.jpg";
+
+                }
+            }
+       
+    </script>
+    
+</div> 
+</body>
+</html>
